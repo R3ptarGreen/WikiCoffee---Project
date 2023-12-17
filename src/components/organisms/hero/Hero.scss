@@ -1,0 +1,4 @@
+.hero{
+     @include flex(column, 0, center, center);
+     background-color: red;
+}

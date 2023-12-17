@@ -1,0 +1,39 @@
+:root {
+	/*Main*/
+	--bg: #F5F7DC;
+	--text: #2D2D2A;
+	--primary: #FF7F11;
+	/*Complement*/
+
+	/*Neutral*/
+	--blackTheme: #222222;
+	--whiteTheme: #ececec;
+	--shadowMain: #c9c9c9;
+	--shadowSec: #ffffff;
+	--blackborder: #00000050;
+
+	/* Tipography*/
+	--mainType: DMSans;
+	--titleType: DMDisplay;
+	--defaultSize: 1rem;
+}
+@font-face {
+	font-family: "DMSans";
+	src: url('assets/fonts/DMSans_18pt-Regular.ttf');
+}
+@font-face {
+	font-family: "DMDisplay";
+	src: url('assets/fonts/DMSerifDisplay-Regular.ttf');
+}
+/*Dark theme
+@media (prefers-color-scheme: dark) {
+  :root{
+    --blackTheme    : #ececec;
+    --whiteTheme    : #303030;
+    --shadowMain    : #242424;
+    --sahdowSec     : #3c3c3c;
+    
+    --blackBorder   : #FFFFFF50;
+  }
+};
+*/

@@ -1,0 +1,14 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+
+//fonts size
+.text--title{
+    font-family: var(--DMDisplay);
+    font-size: 4rem;
+}
+.text--subtitle{
+    font-family: var(--DMDisplay);
+    font-size: 2rem;
+}
+
