@@ -1,0 +1,4 @@
+.item {
+    @include flex(row, 0, center, center);
+    width: fit-content;
+}

@@ -1,5 +1,5 @@
 export { default as AllProductsButton } from './atoms/allProductsButton/AllProductsButton';
-export * from './atoms/iconComponent/Icon';
+export { default as Icon } from './atoms/iconComponent/Icon';
 export { default as Img } from './atoms/imgComponent/Img';
 export * from './index';
 export { default as HeroItem } from './molecules/heroItem/HeroItem';
