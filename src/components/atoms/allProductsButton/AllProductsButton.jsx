@@ -1,8 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 
 const AllProductsButton = () => {
-  return (
-    <button>All Products</button>
-  )
-}
+	const navigate = useNavigate();
+	const handleNavigate = () => {
+		navigate('/products')
+	}
 
-export default AllProductsButton
+	return <button onClick={handleNavigate}>All products</button>;
+};
+
+export default AllProductsButton;
