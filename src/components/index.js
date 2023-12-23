@@ -5,4 +5,5 @@ export * from './index';
 export { default as HeroItem } from './molecules/heroItem/HeroItem';
 export { default as Hero } from './organisms/hero/Hero';
 export { default as Home } from './pages/Home';
+export { default as Products } from './pages/Products';
 export { default as HomeTemplate } from './templates/homeTemplate/HomeTemplate';

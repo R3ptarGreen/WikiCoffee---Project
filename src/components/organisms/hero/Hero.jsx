@@ -1,10 +1,10 @@
 import './Hero.scss'
-import {AllProductsButton} from '../../index'
+import {AllProductsButton, HeroItem} from '../../index'
 const Hero = () => {
 	return (
 		<div className='hero'>
 			<p>heroImg</p>
-			<p>heroItem</p>
+			<HeroItem/>
 			<AllProductsButton/>
 		</div>
 	);
