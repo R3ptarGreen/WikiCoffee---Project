@@ -1,0 +1,7 @@
+.hero{
+    &__heroItem{
+        @include flex(column, 0, center, center);
+        width: 100%;
+        min-width: 12rem;
+    }
+}

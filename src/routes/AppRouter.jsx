@@ -1,6 +1,6 @@
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import App from '../App';
-import { Home, Products } from '../components/index';
+import { Home, Products,AllProductsTemplate, HotProductsTemplate, ColdProductsTemplate } from '../components/index';
 const AppRouter = () => {
 	const routes = createHashRouter([
 		{
@@ -9,11 +9,12 @@ const AppRouter = () => {
 			children: [
 				{ path: '/', element: <Home /> },
 				{
-					path: '/products/',
+					path: '/products',
 					element: <Products />,
 					children: [
-						{ path: 'hot' },
-						{ path: 'cold' },
+						{path:'', element: <AllProductsTemplate/>},
+						{ path: 'hot', element: <HotProductsTemplate/> },
+						{ path: 'cold', element: <ColdProductsTemplate/>},
 					],
 				},
 			],

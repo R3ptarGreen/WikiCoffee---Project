@@ -1,4 +1,42 @@
 .hero{
      @include flex(column, 0, center, center);
-     background-color: red;
+     position: relative;
+     height: 100vh;
+     &__allProductsContainer{
+          @include flex(row, 0, flex-end, center);
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          padding: 1rem;
+          z-index: 1;
+     }
+     &__img{
+          padding: 2rem;
+          width: 100%;
+          min-width: 18rem;
+          max-width: 37.5rem;
+          z-index: 1; 
+     }
+     &__heroItemContainer{
+          @include flex(column, 0, center, center);
+          width: 100%;
+          z-index: 1;
+     }
+}
+.bgDesign{
+     position: absolute;
+     z-index: 0;
+     left: 0;
+     height: 100%;
+     min-height: 40rem;
+     max-height: 64rem;
+}
+@media (min-width: 480px) {
+     .hero{
+          &__heroItemContainer{
+               flex-direction: row;
+               justify-content: space-between;
+          }
+     }
 }
