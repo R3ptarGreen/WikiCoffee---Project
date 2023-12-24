@@ -3,8 +3,8 @@ import './HeroItem.scss';
 import {Icon} from '../../'
 const HeroItem = () => {
   const navigate = useNavigate()
-  const handleNavigate = (type) => {
-	navigate(`products/${type}`);
+  const handleNavigate = () => {
+	navigate('/products');
 }
 	return (
 	    <div className="hero__heroItem heroItem">
@@ -15,14 +15,14 @@ const HeroItem = () => {
       <div>
         <h2>How do you prefer your coffee ?</h2>
         <div className="hero__heroItemButtons">
-          {['hot', 'cold'].map((type) => (
+          {['hot', 'iced'].map((homeType) => (
             <button
-              key={type}
+              key={homeType}
               className="hero__heroItemButton"
-              onClick={() => handleNavigate(type)}
-              role={type}
+              onClick={() => handleNavigate(homeType)}
+              role={homeType}
             >
-              <Icon icon={type} />
+              <Icon icon={homeType} />
             </button>
           ))}
         </div>

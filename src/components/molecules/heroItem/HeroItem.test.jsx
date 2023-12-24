@@ -19,7 +19,7 @@ describe('<HeroItem/>', () => {
 		content = screen.queryByText(/content/i);
 		prefer = screen.queryByText(/prefer/i);
 		buttonHot = screen.getByRole('hot');
-		buttonCold = screen.getByRole('cold');
+		buttonCold = screen.getByRole('iced');
 	});
 	afterEach(() => {
 		cleanup();
@@ -30,11 +30,11 @@ describe('<HeroItem/>', () => {
 	test('should buttons redirect to hot pathname', () => {
 		fireEvent.click(buttonHot);
 
-		expect(window.location.hash).toBe('#/products/hot');
+		expect(window.location.hash).toBe('#/products');
 	});
 	test('should buttons redirect to cold pathname', () => {
 		fireEvent.click(buttonCold);
 
-		expect(window.location.hash).toBe('#/products/cold');
+		expect(window.location.hash).toBe('#/products');
 	});
 });
