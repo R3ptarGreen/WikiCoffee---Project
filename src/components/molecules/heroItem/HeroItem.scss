@@ -2,6 +2,16 @@
     &__heroItem{
         @include flex(column, 0, center, center);
         width: 100%;
-        min-width: 12rem;
+        min-width: 15rem;
+    }
+    &__heroItemButtons{
+        @include flex(row, 1rem, center, center);
+        margin-top: 1rem;
+    }
+    &__heroItemButton{
+        padding: 2rem 1rem;
+        background-color: var(--accent);
+        border-radius: 1rem;
+        cursor: pointer;
     }
 }

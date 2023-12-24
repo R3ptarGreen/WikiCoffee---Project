@@ -4,7 +4,7 @@
 	--text: #2D2D2A;
 	--primary: #FF7F11;
 	/*Complement*/
-
+	--accent: #499167;
 	/*Neutral*/
 	--blackTheme: #222222;
 	--whiteTheme: #ececec;
@@ -18,12 +18,14 @@
 	--defaultSize: 1rem;
 }
 @font-face {
-	font-family: "DMSans";
+	font-family: DMSans;
 	src: url('assets/fonts/DMSans_18pt-Regular.ttf');
+	font-weight: 400;
 }
 @font-face {
-	font-family: "DMDisplay";
+	font-family: DMDisplay;
 	src: url('assets/fonts/DMSerifDisplay-Regular.ttf');
+	font-weight: 400;
 }
 /*Dark theme
 @media (prefers-color-scheme: dark) {

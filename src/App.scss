@@ -3,12 +3,16 @@
 
 
 //fonts size
-.text--title{
-    font-family: var(--DMDisplay);
+.text--homeTitle{
+    font-family: var(--titleType);
     font-size: 4rem;
 }
+.text--title{
+    font-family: var(--titleType);
+    font-size: 2rem;
+}
 .text--subtitle{
-    font-family: var(--DMDisplay);
+    font-family: var(--mainType);
     font-size: 2rem;
 }
 

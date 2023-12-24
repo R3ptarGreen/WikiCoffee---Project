@@ -1,28 +1,34 @@
 import { useNavigate } from "react-router-dom";
 import './HeroItem.scss';
+import {Icon} from '../../'
 const HeroItem = () => {
   const navigate = useNavigate()
-  const handleNavigateHot = () => {
-    navigate('products/hot')
-  }
-  const handleNavigateCold = () => {
-    navigate('products/cold')
-  }
+  const handleNavigate = (type) => {
+	navigate(`products/${type}`);
+}
 	return (
-		<div className="hero__heroItem">
-			<div>
-				<p>WikiCoffee</p>
-				<p>content</p>
-			</div>
-			<div>
-				<p>How do you prefer your coffee ?</p>
-				<div >
-					<button onClick={handleNavigateHot} role="hot" >hot</button>
-					<button onClick={handleNavigateCold} role="cold" >cold</button>
-				</div>
-			</div>
-		</div>
-	);
+	    <div className="hero__heroItem heroItem">
+      <div>
+        <h1 className="text--homeTitle">WikiCoffee</h1>
+        <p className="text--subtitle">content</p>
+      </div>
+      <div>
+        <h2>How do you prefer your coffee ?</h2>
+        <div className="hero__heroItemButtons">
+          {['hot', 'cold'].map((type) => (
+            <button
+              key={type}
+              className="hero__heroItemButton"
+              onClick={() => handleNavigate(type)}
+              role={type}
+            >
+              <Icon icon={type} />
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HeroItem;
