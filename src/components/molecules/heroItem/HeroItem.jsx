@@ -1,10 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import './HeroItem.scss';
 import {Icon} from '../../'
+import useProductContext from '../../../hooks/useProductContext'
+
 const HeroItem = () => {
+  
+  const {setProductType} = useProductContext()
+
   const navigate = useNavigate()
-  const handleNavigate = () => {
-	navigate('/products');
+
+  const handleNavigate = (homeType) => {
+    navigate('/products');
+    setProductType(homeType)
 }
 	return (
 	    <div className="hero__heroItem heroItem">
