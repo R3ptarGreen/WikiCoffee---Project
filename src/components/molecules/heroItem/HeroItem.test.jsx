@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, test } from 'vitest';
 import HeroItem from './HeroItem';
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { HashRouter } from 'react-router-dom';
-
+import { ProductContextProvider } from '../../../context/ProductContext';
 describe('<HeroItem/>', () => {
 	let title;
 	let content;
@@ -12,7 +12,9 @@ describe('<HeroItem/>', () => {
 	beforeEach(() => {
 		render(
 			<HashRouter>
-				<HeroItem />
+				<ProductContextProvider>
+					<HeroItem />
+				</ProductContextProvider>
 			</HashRouter>,
 		);
 		title = screen.queryByText('WikiCoffee');

@@ -6,4 +6,4 @@ const useProductContext = () => {
   return context
 }
 
-export default useProductContext
+export {useProductContext}

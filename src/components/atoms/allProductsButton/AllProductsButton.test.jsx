@@ -1,16 +1,18 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import AllProductsButton from './AllProductsButton.jsx';
-import { describe, test, expect, beforeEach, afterEach} from 'vitest';
-import { HashRouter} from 'react-router-dom';
+import { describe, test, expect, beforeEach, afterEach } from 'vitest';
+import { HashRouter } from 'react-router-dom';
+import { ProductContextProvider } from '../../../context/ProductContext.jsx';
 
 describe('AllMenuButton', () => {
-
 	let button;
-	beforeEach(() => {  
+	beforeEach(() => {
 		render(
 			<HashRouter>
-				<AllProductsButton />
-			</HashRouter>
+				<ProductContextProvider>
+					<AllProductsButton />
+				</ProductContextProvider>
+			</HashRouter>,
 		);
 		button = screen.queryByText('All products');
 	});
@@ -21,9 +23,8 @@ describe('AllMenuButton', () => {
 		expect(button).toBeDefined();
 	});
 	test('should call onClick and redirec the page', () => {
+		fireEvent.click(screen.getByRole('button'));
 
-    fireEvent.click(screen.getByRole('button'));
-
-    expect(window.location.hash).toBe('#/products')
+		expect(window.location.hash).toBe('#/products');
 	});
 });

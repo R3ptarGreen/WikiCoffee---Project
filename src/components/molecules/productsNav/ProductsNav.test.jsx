@@ -1,33 +1,28 @@
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
-import { afterEach, beforeEach, describe, expect, test } from 'vitest';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { test, expect } from 'vitest';
 import ProductsNav from './ProductsNav';
+import { ProductContextProvider } from '../../../context/ProductContext';
 
-describe('<ProducstNav/>', () => {
-	let title;
-	let buttonHot;
-	let buttonCold;
-	let buttonAll;
-	beforeEach(() => {
-		render(<ProductsNav />);
-		title = screen.getByRole('title');
-		buttonHot = screen.getByRole('hot');
-		buttonCold = screen.getByRole('iced');
-		buttonAll = screen.getByRole('all');
-	});
-	afterEach(() => {
-		cleanup();
-	});
-	test('should render', () => {
-		expect(title).toBeTruthy();
-	});
-	test('should change text when the icon is clicked', () => {
-		fireEvent.click(buttonAll);
-		expect(title).toString('Products/All');
+test('should change text when a button is clicked', () => {
+	render(
+		<ProductContextProvider>
+			<ProductsNav />
+		</ProductContextProvider>,
+	);
 
-		fireEvent.click(buttonHot);
-		expect(title).toString('Products/Hot');
+	const title = screen.getByRole('title');
+	const buttonAll = screen.getByRole('All');
+	const buttonHot = screen.getByRole('hot');
+	const buttonIced = screen.getByRole('iced');
 
-		fireEvent.click(buttonCold);
-		expect(title).toString('Products/Iced');
-	});
+	expect(title).toString('Products/All');
+
+	fireEvent.click(buttonHot);
+	expect(title).toString('Products/hot');
+
+	fireEvent.click(buttonIced);
+	expect(title).toString('Products/iced');
+
+	fireEvent.click(buttonAll);
+	expect(title).toString('Products/All');
 });

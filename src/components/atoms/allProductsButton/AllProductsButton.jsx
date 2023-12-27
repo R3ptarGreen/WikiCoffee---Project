@@ -1,7 +1,7 @@
 import './AllProductsButton.scss';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../';
-import useProductContext from '../../../hooks/useProductContext'
+import {useProductContext} from '../../../hooks/useProductContext'
 
 const AllProductsButton = () => {
 	const {setProductType} = useProductContext()

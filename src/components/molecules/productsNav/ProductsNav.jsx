@@ -1,19 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Icon } from '../../';
-import useProductContext from '../../../hooks/useProductContext';
+import {useProductContext} from '../../../hooks/useProductContext';
 
 const ProductsNav = () => {
-	const { productType } = useProductContext();
+	const { productType, setProductType } = useProductContext();
+	console.log('Context:', useProductContext());
 	const [type, setType] = useState(productType);
+
+	useEffect(() => {
+		setType(productType)
+	},[productType])
 
 	const handleType = type => {
 		setType(type);
+		setProductType(type)
 	};
 	return (
 		<nav>
 			<div>
 				<h2 role='title' className='text--homeTitle'>
-					Product/{type}
+					Products/{type}
 				</h2>
 			</div>
 			<div>

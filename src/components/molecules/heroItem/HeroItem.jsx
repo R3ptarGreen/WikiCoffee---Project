@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import './HeroItem.scss';
 import {Icon} from '../../'
-import useProductContext from '../../../hooks/useProductContext'
+import {useProductContext} from '../../../hooks/useProductContext'
 
 const HeroItem = () => {
   
