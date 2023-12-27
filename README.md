@@ -11,4 +11,12 @@ codes important before to deploy
 // npx prettier . --check
 //npx prettier . --write
 
-what I learn
+## what I learn
+lazy loading
+useContext
+customHooks
+axios
+vitest
+testing library
+
+

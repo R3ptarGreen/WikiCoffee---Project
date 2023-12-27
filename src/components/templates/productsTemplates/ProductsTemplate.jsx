@@ -1,9 +1,9 @@
-import { ProductsNav } from "../..";
+import { ProductsContainer } from "../..";
 
 const ProductsTemplate = () => {
 	return (
 		<>
-			<ProductsNav/>
+			<ProductsContainer/>
 		</>
 	);
 };

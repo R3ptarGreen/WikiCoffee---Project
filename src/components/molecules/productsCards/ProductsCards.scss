@@ -1,0 +1,12 @@
+.cards{
+    @include flex(row, 0, center, center);
+    flex-wrap: wrap;
+    &__card{
+        max-width: 23rem;
+    }
+    &__img{
+        width: 100%;
+        max-width: 23rem;
+        max-height: 10rem;
+    }
+}
