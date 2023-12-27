@@ -16,11 +16,15 @@ const ProductsCards = () => {
 		<div role='cards' className='cards'>
 			{selectedData.map((item, index) => (
 				<div className='cards__card' key={index}>
-					<img loading='lazy' className='cards__img' src={item.image}/>
+					<img loading='lazy' className='cards__img' src={item.image} />
 					<div className='cards__item'>
-						<h2 className=''>{item.title}</h2>
-						<ul>
-							<li className=''>{item.ingredients}</li>
+						<h2 className='text--title'>{item.title}</h2>
+						<ul className='cards__itemInfo'>
+							{item.ingredients.map((item, index) => (
+								<li className='cards__itemInfoList' key={index}>
+									{item}
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>

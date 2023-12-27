@@ -1,12 +1,32 @@
 .cards{
-    @include flex(row, 0, center, center);
-    flex-wrap: wrap;
+    display:  grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 20rem));
+    justify-content: center;
+    align-items: start;
     &__card{
-        max-width: 23rem;
+        min-height: fit-content;
+
+        background-color: white;
+        border-radius: 1rem;
+        overflow: hidden;
     }
     &__img{
         width: 100%;
-        max-width: 23rem;
-        max-height: 10rem;
+        max-width: 20rem;
+        max-height: 15rem;
+    }
+    &__item{
+        cursor: default;
+        padding: 0.5rem 0.75rem;
+    }
+    &__itemInfo{
+        @include flex (row, 0.5rem, start, center);
+        flex-wrap: wrap;
+    }
+    &__itemInfoList {
+        width: fit-content;
+        border: thin solid;
+        padding: 0.125rem;
     }
 }
