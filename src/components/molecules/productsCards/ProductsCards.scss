@@ -11,10 +11,20 @@
         border-radius: 1rem;
         overflow: hidden;
     }
+    &__imgContainer{
+        width: 100%;
+        max-width: 20rem;
+        max-height: 15rem;
+        overflow: hidden;
+    }
     &__img{
         width: 100%;
         max-width: 20rem;
         max-height: 15rem;
+        transition: .5s, color .10s;
+        &:hover {
+            transform: scale3d(1.2, 1.2, 0.3);
+        }
     }
     &__item{
         cursor: default;
@@ -30,3 +40,6 @@
         padding: 0.125rem;
     }
 }
+
+            
+              

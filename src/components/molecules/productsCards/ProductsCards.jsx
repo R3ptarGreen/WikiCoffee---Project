@@ -16,7 +16,9 @@ const ProductsCards = () => {
 		<div role='cards' className='cards'>
 			{selectedData.map((item, index) => (
 				<div className='cards__card' key={index}>
-					<img loading='lazy' className='cards__img' src={item.image} />
+					<figure className='cards__imgContainer'>
+						<img loading='lazy' className='cards__img' src={item.image} />
+					</figure>
 					<div className='cards__item'>
 						<h2 className='text--title'>{item.title}</h2>
 						<ul className='cards__itemInfo'>
