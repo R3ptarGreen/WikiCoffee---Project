@@ -22,6 +22,7 @@
         max-width: 20rem;
         max-height: 15rem;
         transition: .5s, color .10s;
+        z-index: 0;
         &:hover {
             transform: scale3d(1.2, 1.2, 0.3);
         }

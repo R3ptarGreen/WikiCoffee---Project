@@ -1,8 +1,10 @@
 import './ProductsCards.scss';
 import useCoffeeAxios from '../../../hooks/useCoffeeAxios';
 import { useProductContext } from '../../../hooks/useProductContext';
-const ProductsCards = () => {
-	const { productType } = useProductContext();
+import PropTypes from 'prop-types';
+
+const ProductsCards = ({activeModal}) => {
+	const { productType, setModalInfo } = useProductContext();
 	const { allData, hotData, icedData } = useCoffeeAxios();
 
 	const selectedData =
@@ -12,10 +14,21 @@ const ProductsCards = () => {
 				? icedData
 				: allData;
 
+	const handleModal = (item) => {
+		const modalProp =
+			{
+				"img" : item.image,
+				"title" : item.title,
+				"description" : item.description, 
+				"ingredients" : item.ingredients
+			};
+		setModalInfo(modalProp);
+		activeModal();
+	}
 	return (
-		<div role='cards' className='cards'>
+		<div role='ProductsCards' className='cards'>
 			{selectedData.map((item, index) => (
-				<div className='cards__card' key={index}>
+				<div className='cards__card' key={index} onClick={() => handleModal(item)}>
 					<figure className='cards__imgContainer'>
 						<img loading='lazy' className='cards__img' src={item.image} />
 					</figure>
@@ -34,5 +47,7 @@ const ProductsCards = () => {
 		</div>
 	);
 };
-
+ProductsCards.propTypes = {
+	activeModal: PropTypes.func
+}
 export default ProductsCards;

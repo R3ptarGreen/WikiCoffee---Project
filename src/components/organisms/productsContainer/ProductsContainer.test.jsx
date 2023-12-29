@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen} from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 import ProductsContainer from './ProductsContainer';
 import { ProductContextProvider } from '../../../context/ProductContext';
@@ -13,4 +13,7 @@ describe('<ProductsContainer', () => {
 		const container = screen.getByRole('container');
 		expect(container).toBeTruthy();
 	});
+	test('should not show modal in the start', async() => { 
+		expect(screen.queryByRole('modal')).toBeFalsy
+	 })
 });

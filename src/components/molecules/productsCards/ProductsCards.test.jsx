@@ -10,7 +10,7 @@ describe('<ProductsCards/>', () => {
 				<ProductsCards />
 			</ProductContextProvider>,
 		);
-		card = screen.getByRole('cards');
+		card = screen.getByRole('ProductsCards');
 	});
     afterEach(() => {
         cleanup()

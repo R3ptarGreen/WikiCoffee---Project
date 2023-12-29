@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import './Modal.scss'
-const Modal = ({img, title, description, ingredients}) => {
+const Modal = ({img, title, description, ingredients, handleModal}) => {
 	return (
-		<div role='modal' className='modal'>
+		<div role='modal' className='modal' onClick={handleModal}>
 			<div role='item' className='modal__item'>
 				<figure className='modal__imgContainer'>
 					<img src={img} className='modal__img'/>
@@ -21,8 +21,9 @@ const Modal = ({img, title, description, ingredients}) => {
 Modal.propTypes = {
     img: PropTypes.string,
     title: PropTypes.string,
+    handleModal:PropTypes.func,
     description: PropTypes.string,
-    ingredients: PropTypes.string
+    ingredients: PropTypes.array,
 }
 
 export default Modal;
