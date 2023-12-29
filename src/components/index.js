@@ -1,6 +1,8 @@
 export { default as AllProductsButton } from './atoms/allProductsButton/AllProductsButton';
 export { default as Icon } from './atoms/iconComponent/Icon';
 export { default as Img } from './atoms/imgComponent/Img';
+export { default as Modal } from './atoms/modal/Modal';
+export * from './index';
 export { default as HeroItem } from './molecules/heroItem/HeroItem';
 export { default as ProductsCards } from './molecules/productsCards/ProductsCards';
 export { default as ProductsNav } from './molecules/productsNav/ProductsNav';

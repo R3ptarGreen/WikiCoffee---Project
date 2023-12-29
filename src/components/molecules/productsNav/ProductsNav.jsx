@@ -20,18 +20,16 @@ const ProductsNav = () => {
 		setMenuType(!menuType)
 	}
 	return (
-		<nav>
+		<nav className='nav'>
 			<div>
 				<h2 role='title' className='text--homeTitle'>
 					Products/{type}
 				</h2>	
 			</div>
-			<div>
+			<div className='nav__menuCoffee'>
 				<Icon role={'coffee'} icon={'coffee'} onClick={handleMenu}/>
-				<Icon role={'ingredient'} icon={'ingredient'} />
-			</div>
 			{menuType && 
-			<div role='menuType'>
+			<div role='menuType' className='nav__menuCoffeeItem'>
 				{['All', 'hot', 'iced'].map(navType => (
 					<button
 					key={navType}
@@ -43,6 +41,7 @@ const ProductsNav = () => {
 				))}
 			</div>
 			}
+			</div>
 		</nav>
 	);
 };

@@ -1,3 +1,19 @@
+.nav{
+    @include flex(row, 0, space-between, center);
+    padding: 1rem;
+    &__menuCoffee{
+        position: relative;
+    }
+    &__menuCoffeeItem {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        padding: 1rem;
+        background-color: var(--accent);
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
 .hide{
     display: none;
 }
