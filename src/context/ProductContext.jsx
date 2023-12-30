@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export const ProductContext = createContext();
 
 export const ProductContextProvider = ({children}) => {
-    const [productType, setProductType] = useState()
+    const [productType, setProductType] = useState('All')
     const [modalInfo, setModalInfo] = useState()
     const contextValue = {
         productType,
