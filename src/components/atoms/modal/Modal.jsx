@@ -11,7 +11,7 @@ const Modal = ({img, title, description, ingredients, handleModal}) => {
                     <h2 className='text--title'>{title}</h2>
                     <p>{description}</p>
                     <ul className='modal__infoItemList'>
-                        {ingredients.map((item, index) => (
+                        {ingredients && ingredients.map((item, index) => (
                             <li className='modal__infoList' key={index}>{item}</li>
                         ))}
                     </ul>
