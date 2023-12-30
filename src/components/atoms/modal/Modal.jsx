@@ -5,7 +5,7 @@ const Modal = ({img, title, description, ingredients, handleModal}) => {
 		<div role='modal' className='modal' onClick={handleModal}>
 			<div role='item' className='modal__item'>
 				<figure className='modal__imgContainer'>
-					<img src={img} className='modal__img'/>
+					<img loading='lazy' src={img} className='modal__img'/>
 				</figure>
                 <article className='modal__info'>
                     <h2>{title}</h2>

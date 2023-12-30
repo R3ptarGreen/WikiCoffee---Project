@@ -7,14 +7,15 @@ const ProductsContainer = () => {
   const [openModal, setOpenModal] = useState(false)
   
   const handleModal = () => {
-    setOpenModal(!openModal)
+    setTimeout(() => {
+      setOpenModal(!openModal)
+    }, 50)
   }
 
   return (
     <div role="container">
       {openModal && (Array(modalInfo).map((item, index) => (
           <Modal
-          role='modal'
           key={index} 
           img={item.img}
           title={item.title}
@@ -25,7 +26,7 @@ const ProductsContainer = () => {
           ))
         )}
         <ProductsNav/>
-        <ProductsCards testid={'card'} activeModal={handleModal}/>
+        <ProductsCards activeModal={handleModal}/>
     </div>
   )
 }

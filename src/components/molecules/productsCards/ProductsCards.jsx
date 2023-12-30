@@ -26,9 +26,9 @@ const ProductsCards = ({activeModal}) => {
 		activeModal();
 	}
 	return (
-		<div role='ProductsCards' className='cards'>
+		<div role='card' className='cards' >
 			{selectedData.map((item, index) => (
-				<div className='cards__card' key={index} onClick={() => handleModal(item)}>
+				<div role='cardImg' className='cards__card' key={index} onClick={() => handleModal(item)} >
 					<figure className='cards__imgContainer'>
 						<img loading='lazy' className='cards__img' src={item.image} />
 					</figure>
