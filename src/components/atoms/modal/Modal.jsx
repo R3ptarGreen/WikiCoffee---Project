@@ -8,10 +8,12 @@ const Modal = ({img, title, description, ingredients, handleModal}) => {
 					<img loading='lazy' src={img} className='modal__img'/>
 				</figure>
                 <article className='modal__info'>
-                    <h2>{title}</h2>
+                    <h2 className='text--title'>{title}</h2>
                     <p>{description}</p>
-                    <ul>
-                        <li>{ingredients}</li>
+                    <ul className='modal__infoItemList'>
+                        {ingredients.map((item, index) => (
+                            <li className='modal__infoList' key={index}>{item}</li>
+                        ))}
                     </ul>
                 </article>
 			</div>

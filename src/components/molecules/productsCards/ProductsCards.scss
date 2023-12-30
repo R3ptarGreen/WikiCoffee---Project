@@ -6,8 +6,8 @@
     align-items: start;
     &__card{
         min-height: fit-content;
-
-        background-color: white;
+        cursor: pointer;
+        background-color: var(--primary);
         border-radius: 1rem;
         overflow: hidden;
     }
@@ -28,10 +28,10 @@
         }
     }
     &__item{
-        cursor: default;
         padding: 0.5rem 0.75rem;
     }
     &__itemInfo{
+        cursor: default;
         @include flex (row, 0.5rem, start, center);
         flex-wrap: wrap;
     }

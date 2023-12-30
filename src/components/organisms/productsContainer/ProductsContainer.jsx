@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {ProductsNav, ProductsCards, Modal} from '../..';
 import {useProductContext} from '../../../hooks/useProductContext'
-
+import './ProductsContainer.scss';
 const ProductsContainer = () => {
   const {modalInfo} = useProductContext();
   const [openModal, setOpenModal] = useState(false)
@@ -13,7 +13,7 @@ const ProductsContainer = () => {
   }
 
   return (
-    <div role="container">
+    <div role="container" className='container'>
       {openModal && (Array(modalInfo).map((item, index) => (
           <Modal
           key={index} 
