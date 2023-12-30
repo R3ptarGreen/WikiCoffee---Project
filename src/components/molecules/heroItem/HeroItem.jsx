@@ -17,10 +17,10 @@ const HeroItem = () => {
 	    <div className="hero__heroItem heroItem">
       <div>
         <h1 className="text--homeTitle">WikiCoffee</h1>
-        <p className="text--subtitle">content</p>
+        <p className="text--subtitle">Coffee is more than a beverage, however. It is a memory, an anticipation, a lifetime of consoling moments of modest pleasure woven into our lives.</p>
       </div>
       <div>
-        <h2>How do you prefer your coffee ?</h2>
+        <h2 className={"text--subtitle"} >How do you prefer your coffee ?</h2>
         <div className="hero__heroItemButtons">
           {['hot', 'iced'].map((homeType) => (
             <button

@@ -18,7 +18,7 @@ describe('<HeroItem/>', () => {
 			</HashRouter>,
 		);
 		title = screen.queryByText('WikiCoffee');
-		content = screen.queryByText(/content/i);
+		content = screen.queryByText(/beverage/i);
 		prefer = screen.queryByText(/prefer/i);
 		buttonHot = screen.getByRole('hot');
 		buttonCold = screen.getByRole('iced');

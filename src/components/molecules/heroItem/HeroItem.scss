@@ -1,8 +1,10 @@
 .hero{
     &__heroItem{
-        @include flex(column, 0, center, center);
+        @include flex(column, 2rem, center, center);
         width: 100%;
         min-width: 15rem;
+        text-align: center;
+        padding-bottom: 2rem;
     }
     &__heroItemButtons{
         @include flex(row, 1rem, center, center);
