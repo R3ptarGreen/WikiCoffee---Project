@@ -1,6 +1,10 @@
 .nav{
     @include flex(row, 0, space-between, center);
+    width: 100%;
+    position: fixed;
     padding: 1rem;
+    z-index: 4;
+    background-color: var(--bg);
     &__menuCoffee{
         position: relative;
     }
