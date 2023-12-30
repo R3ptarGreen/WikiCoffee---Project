@@ -10,10 +10,23 @@
         top: 100%;
         padding: 1rem;
         background-color: var(--accent);
-        border-radius: 0 0 1rem 1rem;
+        border-radius: 1rem;
     }
 }
-
+@media (max-width: 650px) {
+    .nav{
+        &__title{
+            font-size: 3rem;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .nav{
+        &__title{
+            font-size: 2.25rem;
+        }
+    }
+}
 .hide{
     display: none;
 }

@@ -2,16 +2,17 @@ import { useEffect, useState } from 'react';
 import { Icon } from '../../';
 import {useProductContext} from '../../../hooks/useProductContext';
 import  './ProductsNav.scss'
-
+import useCoffeeAxios from '../../../hooks/useCoffeeAxios'
 const ProductsNav = () => {
 	const { productType, setProductType } = useProductContext();
 	const [type, setType] = useState(productType);
 	const [menuType, setMenuType] = useState(false);
+	const { allData, hotData, icedData } = useCoffeeAxios();
 
 	useEffect(() => {
 		setType(productType)
 	},[productType])
-
+	
 	const handleType = type => {
 		setType(type);
 		setProductType(type)
@@ -19,11 +20,17 @@ const ProductsNav = () => {
 	const handleMenu = () => {
 		setMenuType(!menuType)
 	}
+	const selectedData =
+		productType === 'hot'
+			? hotData
+			: productType === 'iced'
+				? icedData
+				: allData;
 	return (
 		<nav className='nav'>
 			<div>
-				<h2 role='title' className='text--homeTitle'>
-					Products/{type}
+				<h2 role='title' className='nav__title text--homeTitle'>
+					Products #{selectedData.length}/{type}
 				</h2>	
 			</div>
 			<div className='nav__menuCoffee'>
