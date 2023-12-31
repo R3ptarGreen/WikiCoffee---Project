@@ -39,6 +39,7 @@ const ProductsNav = () => {
 			<div role='menuType' className='nav__menuCoffeeItem'>
 				{['All', 'hot', 'iced'].map(navType => (
 					<button
+					className='nav__menuCoffeeItemButton'
 					key={navType}
 					onClick={() => handleType(navType)}
 					role={navType}

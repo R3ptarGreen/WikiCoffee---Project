@@ -15,6 +15,13 @@
         padding: 1rem;
         background-color: var(--accent);
         border-radius: 1rem;
+        @include flex(column, 0.5rem, center, center);
+    }
+    &__menuCoffeeItemButton{
+        cursor: pointer;
+        &:hover{
+            color: var(--bg);
+        }
     }
 }
 @media (max-width: 650px) {
