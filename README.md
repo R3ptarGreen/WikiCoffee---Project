@@ -37,7 +37,7 @@ WikiCoffee is a project designed and coded by Edgar Mendez. Create a simple wiki
 
 ### Links
 
-- Live Site URL: [ShopWave Demo](https://incomparable-maamoul-d8af1b.netlify.app/)
+- Live Site URL: [WikiCoffee](https://preeminent-clafoutis-155b8c.netlify.app/)
 
 ### Contribution
 
