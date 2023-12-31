@@ -10,20 +10,20 @@
 	--whiteTheme: #ececec;
 	--shadowMain: #c9c9c9;
 	--shadowSec: #ffffff;
-	--blackborder: #00000050;
+	--blackBorder: #00000050;
 
-	/* Tipography*/
-	--mainType: DMSans;
-	--titleType: DMDisplay;
+	/* Typography*/
+	--mainType: 'DMSans';
+	--titleType: 'DMDisplay';
 	--defaultSize: 1rem;
 }
 @font-face {
-	font-family: DMSans;
+	font-family: 'DMSans';
 	src: url('assets/fonts/DMSans_18pt-Regular.ttf');
 	font-weight: 400;
 }
 @font-face {
-	font-family: DMDisplay;
+	font-family: 'DMDisplay';
 	src: url('assets/fonts/DMSerifDisplay-Regular.ttf');
 	font-weight: 400;
 }

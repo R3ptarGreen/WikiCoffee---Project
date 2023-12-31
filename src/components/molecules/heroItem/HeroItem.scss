@@ -5,6 +5,7 @@
         min-width: 15rem;
         text-align: center;
         padding-bottom: 2rem;
+        cursor: default;
     }
     &__heroItemButtons{
         @include flex(row, 1rem, center, center);
