@@ -29,8 +29,8 @@ WikiCoffee is a project designed and coded by Edgar Mendez. Create a simple wiki
 
 ### Screenshot
 
-<img src="/public/design/HomeMobile.png" alt="HomeMobile" height="400">
-<img src="/public/design/HomeDesktop.png" alt="HomeDesktop" width="400">
+<img src="/public/design/homeMobile.png" alt="HomeMobile" height="400">
+<img src="/public/design/homeDesktop.png" alt="HomeDesktop" width="400">
 <img src="/public/design/productsMobile.png" alt="productsMobile" height="400">
 <img src="/public/design/productsDesktop.png" alt="productsDesktop" width="400">
 
