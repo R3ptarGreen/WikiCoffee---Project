@@ -4,7 +4,7 @@
 
 ## Project Description
 
-WikiCoffee is a project to test myself with react, vitest and testing library, implementing everything I know about the framework, using external resources like a axios
+WikiCoffee is a simple project consuming a API of coffees with react, vitest and testing library, implementing everything I know about the framework, using external resources to consume the API like a axios
 
 ## Table of Contents
  
@@ -25,7 +25,7 @@ WikiCoffee is a project to test myself with react, vitest and testing library, i
 
 ### The Challenge
 
-ShopWave is a project designed and coded by Edgar Mendez. Create a E-commerce with a shopping cart with multiple async bugs that I was unaware of.
+WikiCoffee is a project designed and coded by Edgar Mendez. Create a simple wiki for coffee cart with multiple context data.
 
 ### Screenshot
 
